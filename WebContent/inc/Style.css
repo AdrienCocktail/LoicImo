@@ -1,0 +1,61 @@
+/* Général ------------------------------------------------------------------------------------- */
+
+body, p, legend, label, input {
+    font: normal 8pt verdana, helvetica, sans-serif;
+    margin: 0px;
+}
+
+/*+---------------------------------+*/
+/*|									|*/
+/*|				MENU				|*/
+/*|									|*/
+/*+---------------------------------+*/
+
+.menu{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.15));
+}
+
+.menu div{
+	margin-left: 20px;
+	margin-right: auto;
+}
+
+.menu, a {
+	background-color: #35B9D2;
+	color: #FEFFFF;
+	font-size: 14px;
+	font-weight: 100;
+	text-decoration: none;
+}
+
+.menu ul{
+	list-style-type: none;
+	margin: 0px;
+	padding-right: 20px;
+	padding-left: auto;
+}
+
+.menu ul li{
+	display: inline-block;
+	margin: 0;
+}
+
+.menu ul li a{
+	display: flex;
+	padding: 20px 20px 20px 20px;
+	margin: 0;
+}
+
+.menu ul li a:hover{
+	background-color: #475972;
+	transition-duration: 0.1s;
+}
+
+/*+---------------------------------+*/
+/*|									|*/
+/*|				MENU				|*/
+/*|									|*/
+/*+---------------------------------+*/
