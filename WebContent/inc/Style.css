@@ -5,11 +5,11 @@ body, p, legend, label, input {
     margin: 0px;
 }
 
-/*+---------------------------------+*/
-/*|									|*/
-/*|				MENU				|*/
-/*|									|*/
-/*+---------------------------------+*/
+/*+-------------------------------------------------------------------------+*/
+/*|																			|*/
+/*|									MENU									|*/
+/*|																			|*/
+/*+-------------------------------------------------------------------------+*/
 
 .menu{
 	display: flex;
@@ -51,11 +51,74 @@ body, p, legend, label, input {
 
 .menu ul li a:hover{
 	background-color: #475972;
-	transition-duration: 0.1s;
+	transition-duration: 0.2s;
+}
+
+.logo img{
+	transform: translateY(4px);
 }
 
 /*+---------------------------------+*/
-/*|									|*/
-/*|				MENU				|*/
-/*|									|*/
+/*|				icones				|*/
 /*+---------------------------------+*/
+
+.accueil::before {
+	content: '';
+	width: 20px;
+	height: 20px;
+	background: url(img/Accueil.png) center center / contain no-repeat;
+	margin-right: 3px;
+	transform: translateY(-1px);
+}
+
+.a_propos::before {
+	content: '';
+	width: 20px;
+	height: 20px;
+	background: url(img/A_propos.png) center center / contain no-repeat;
+	margin-right: 3px;
+	transform: translateY(-1px);
+}
+
+.temoignages::before {
+	content: '';
+	width: 20px;
+	height: 20px;
+	background: url(img/Temoignages.png) center center / contain no-repeat;
+	margin-right: 3px;
+	transform: translateY(-1px);
+}
+
+.formation::before {
+	content: '';
+	width: 20px;
+	height: 20px;
+	background: url(img/Formation.png) center center / contain no-repeat;
+	margin-right: 3px;
+	transform: translateY(-1px);
+}
+
+.contact::before {
+	content: '';
+	width: 20px;
+	height: 20px;
+	background: url(img/Contact.png) center center / contain no-repeat;
+	margin-right: 3px;
+	transform: translateY(-1px);
+}
+
+a:hover::before{
+	transform: rotate(-0.5turn);
+	transition-duration: 0.5s;
+}
+
+/*+---------------------------------+*/
+/*|				icones				|*/
+/*+---------------------------------+*/
+
+
+/*+-------------------------------------------------------------------------+*/
+/*|																			|*/
+/*|									MENU									|*/
+/*|																			|*/
+/*+-------------------------------------------------------------------------+*/
