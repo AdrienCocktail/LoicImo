@@ -12,10 +12,13 @@ body, p, legend, label, input {
 /*+-------------------------------------------------------------------------+*/
 
 .menu{
+	position: fixed;
+	width: 100%;
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
 	filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.15));
+	z-index: 2;
 }
 
 .menu div{
@@ -116,9 +119,66 @@ a:hover::before{
 /*|				icones				|*/
 /*+---------------------------------+*/
 
-
 /*+-------------------------------------------------------------------------+*/
 /*|																			|*/
 /*|									MENU									|*/
 /*|																			|*/
 /*+-------------------------------------------------------------------------+*/
+
+/*+-------------------------------------------------------------------------+*/
+/*|																			|*/
+/*|								ESPACE COMMENTAIRE							|*/
+/*|																			|*/
+/*+-------------------------------------------------------------------------+*/
+
+.spaceComm{
+	padding: 100px 80px 10px 80px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: flex-start;
+}
+
+.card{
+	background-color: #FAF9F9;
+	margin: 50px 5px 0px 5px;
+	padding: 0px 20px 20px 20px;
+	width: 400px;
+	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+	border-radius: 5px;
+	border: 1px solid #FFFFFF;
+	display: inline-block;
+}
+
+.card h1{
+	margin: 0;
+	padding-top: 15px;
+	font-size: 16px;
+}
+
+.card p{
+	padding: 0px 30px 0px 60px;
+	font-size: 12px;
+}
+
+.card::before {
+	display: inline-block;
+	content: '';
+	width: 50px;
+	height: 50px;
+	background: url(img/logo_message.png) center center / contain no-repeat;
+	transform: translateY(+5px);
+	z-index: 1;
+}
+
+.card:hover::before {
+	transform: rotate(+0.03turn);
+	transition-duration: 0.5s;
+}
+
+/*+-------------------------------------------------------------------------+*/
+/*|																			|*/
+/*|								ESPACE COMMENTAIRE							|*/
+/*|																			|*/
+/*+-------------------------------------------------------------------------+*/
+
