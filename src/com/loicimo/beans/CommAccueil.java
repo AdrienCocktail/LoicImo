@@ -1,12 +1,21 @@
 package com.loicimo.beans;
 
 public class CommAccueil {
-
+	
+		private Long ID;
 	 	private String firstName;
 	    private String lastName;
 	    private String email;
 	    private String message;
 	    private String date;
+	    
+	    public void setID( Long ID ) {
+	        this.ID = ID;
+	    }
+
+	    public Long getID() {
+	        return ID;
+	    }
 	    
 	    public void setFirstName( String firstName ) {
 	        this.firstName = firstName;

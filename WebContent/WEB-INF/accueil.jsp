@@ -24,50 +24,12 @@
 		</nav>
 		
 		<div class="spaceComm">
-			<div class="card">
-				<p>Accedat huc suavitas quaedam oportet sermonum atque oportet sermonum atque oportet sermonum at morum, haud mediocre.</p>
-				<h1><c:out value="${ Comment.firstName }"/></h1>
-			</div>
-			<div class="card">
-				<p>Accedat huc suavitas quaedam  quaedam oportet sermonum atque oportet sermonum suavitas quaedam oportet sermonum atque oportet sermonumsuavitas quaedam oportet sermonum atque oportet sermonum atque oportet sermonum at morum, haud mediocre.</p>
-				<h1>Adrien Cheynet</h1>
-			</div>
-			<div class="card">
-				<p>Accedat huc suavitas quaedam oportet sermonum atque oportet sermonum atque oportet sermonum at morum, haud mediocre.</p>
-				<h1>Adrien Cheynet</h1>
-			</div>
-			<div class="card">
-				<p>Accedat huc suavitas quaedam oportet sermonum atque oportet sermonum atque oportet sermonum at morum, haud mediocre.</p>
-				<h1>Adrien Cheynet</h1>
-			</div>
-			<div class="card">
-				<p>Accedat huc suavitas Accedat huc suavitas quaedam oportet sermonum atque oportet sermonum suav Accedat huc suavitas quaedam oportet sermonum atque oportet sermonum suav Accedat huc suavitas quaedam oportet sermonum atque oportet sermonum suav Accedat huc suavitas quaedam oportet sermonum atque oportet sermonum suav quaedam oportet sermonum atque oportet sermonum atque oportet sermonum at morum, haud mediocre.</p>
-				<h1>Adrien Cheynet</h1>
-			</div>
-			<div class="card">
-				<p>Accedat huc suavitas quaedam oportet sermonum atque oportet sermonum atque oportet sermonum at morum, haud mediocre.</p>
-				<h1>Adrien Cheynet</h1>
-			</div>
-			<div class="card">
-				<p>Accedat huc suavitas quaedam oportet sermonum atque oportet sermonum atque oportet sermonum at morum, haud mediocre.</p>
-				<h1>Adrien Cheynet</h1>
-			</div>
-			<div class="card">
-				<p>Accedat huc suavitas quaedam oportet sermonum atque oportet sermonum atque oportet sermonum at morum, haud mediocre.</p>
-				<h1>Adrien Cheynet</h1>
-			</div>
-			<div class="card">
-				<p>Accedat huc suavitas quaedam oportet sermonum atque oportet sermonum atque oportet sermonum at morum, haud mediocre.</p>
-				<h1>Adrien Cheynet</h1>
-			</div>
-			<div class="card">
-				<p>Accedat huc suavitas quaedam oportet sermonum atque oportet sermonum atque oportet sermonum at morum, haud mediocre.</p>
-				<h1>Adrien Cheynet</h1>
-			</div>
-			<div class="card">
-				<p>Accedat huc suavitas quaedam oportet sermonum atque oportet sermonum atque oportet sermonum at morum, haud mediocre.</p>
-				<h1>Adrien Cheynet</h1>
-			</div>
+			<c:forEach items="${ Comment }" var="Comment" varStatus="boucle">
+				<div class="card">
+					<p><c:out value="${ Comment.value.message }"/></p>
+					<h1><c:out value="${ Comment.value.firstName } ${ Comment.value.lastName }"/></h1>
+				</div>
+			</c:forEach>
 		</div>
 		
 	</body>

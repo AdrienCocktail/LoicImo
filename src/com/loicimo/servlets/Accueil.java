@@ -1,6 +1,10 @@
 package com.loicimo.servlets;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -27,12 +31,14 @@ public class Accueil extends HttpServlet{
 	public void doGet(HttpServletRequest request, HttpServletResponse response) 
 	throws ServletException, IOException{
 		
-		CommAccueil commAccueil = new CommAccueil();
-		commAccueil = commAccueilDao.read( "jadorejquery@unefois.be" );
-		/*String name = "Adrien";*/
+		List<CommAccueil> listcommAccueil = commAccueilDao.read();
+		Map<Long,CommAccueil> mapCommAccueil = new HashMap<Long, CommAccueil>();
+		for (CommAccueil commAccueil : listcommAccueil) {
+			mapCommAccueil.put( commAccueil.getID(), commAccueil);
+		}
 		
 		/*Comment.setFirstName(Comment.);*/
-        request.setAttribute( ATT_COMMENT, commAccueil );
+        request.setAttribute( ATT_COMMENT, mapCommAccueil );
 		
 		this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
 	}

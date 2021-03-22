@@ -1,8 +1,10 @@
 package com.loicimo.dao;
 
+import java.util.List;
+
 import com.loicimo.beans.CommAccueil;
 
 public interface CommAccueilDao {
 
-	CommAccueil read( String message) throws DAOException;
+	List<CommAccueil> read() throws DAOException;
 }
