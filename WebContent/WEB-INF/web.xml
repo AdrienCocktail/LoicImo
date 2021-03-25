@@ -9,10 +9,20 @@
 		<servlet-name>Accueil</servlet-name>
 		<servlet-class>com.loicimo.servlets.Accueil</servlet-class>
 	</servlet>
+	
+	<servlet>
+		<servlet-name>Admin</servlet-name>
+		<servlet-class>com.loicimo.servlets.Admin</servlet-class>
+	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>Accueil</servlet-name>
 		<url-pattern>/accueil</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>Admin</servlet-name>
+		<url-pattern>/admin</url-pattern>
 	</servlet-mapping>
   
 </web-app>
