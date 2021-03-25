@@ -1,7 +1,6 @@
 package com.loicimo.servlets;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -15,19 +14,19 @@ import com.loicimo.beans.CommAccueil;
 import com.loicimo.dao.CommAccueilDao;
 import com.loicimo.dao.DAOFactory;
 
-public class Accueil extends HttpServlet{
+public class Admin extends HttpServlet {
 
     public static final String ATT_COMMENT = "Comment";
-	public static final String VUE = "/WEB-INF/accueil.jsp";
+	public static final String VUE = "/WEB-INF/admin.jsp";
     public static final String CONF_DAO_FACTORY = "daofactory";
-    
-    private CommAccueilDao     commAccueilDao;
-
-    public void init() throws ServletException {
-        /* Récupération d'une instance de notre DAO Utilisateur */
-        this.commAccueilDao = ( (DAOFactory) getServletContext().getAttribute( CONF_DAO_FACTORY ) ).getCommAccueilDao();
-    }
-
+	
+	private CommAccueilDao     commAccueilDao;
+	
+	 public void init() throws ServletException {
+	        /* Récupération d'une instance de notre DAO Utilisateur */
+	        this.commAccueilDao = ( (DAOFactory) getServletContext().getAttribute( CONF_DAO_FACTORY ) ).getCommAccueilDao();
+	 }
+	
 	public void doGet(HttpServletRequest request, HttpServletResponse response) 
 	throws ServletException, IOException{
 		
@@ -38,6 +37,7 @@ public class Accueil extends HttpServlet{
 		}
 		
         request.setAttribute( ATT_COMMENT, mapCommAccueil );
+		
 		
 		this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
 	}

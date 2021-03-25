@@ -144,7 +144,7 @@ a:hover::before{
 	margin: 50px 5px 0px 5px;
 	padding: 0px 20px 20px 20px;
 	width: 400px;
-	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+	box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
 	border-radius: 5px;
 	border: 1px solid #FFFFFF;
 	display: inline-block;
@@ -179,6 +179,71 @@ a:hover::before{
 /*+-------------------------------------------------------------------------+*/
 /*|																			|*/
 /*|								Espace Commentaire							|*/
+/*|																			|*/
+/*+-------------------------------------------------------------------------+*/
+
+/*+-------------------------------------------------------------------------+*/
+/*|																			|*/
+/*|								Tableau Admin								|*/
+/*|																			|*/
+/*+-------------------------------------------------------------------------+*/
+
+.tableau{
+	background-color: rgba(223, 223, 223, 0.4);
+	width: 98%;
+	padding: 20px 0px 5px 0px;
+  	margin: 60px auto 30px auto;
+	border-radius: 5px;
+	box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+}
+
+table{
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0px auto 0px auto;
+}
+
+caption{
+	
+  	margin: 0px 0px 20px 0px;
+}
+
+table td{
+	padding: 15px 8px 15px 8px;
+}
+
+table tr{
+	background-color: rgba(250, 249, 249, 1);
+}
+
+table th{
+	padding: 15px 8px 15px 8px;
+}
+
+table a{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	content: '';
+	width: 20px;
+	height: 20px;
+	background: url(img/Delete.png) center center / contain no-repeat;
+	transition-duration: 0.5s;
+}
+
+table a:hover{
+	background: url(img/DeleteR.png) center center / contain no-repeat;
+	transition-duration: 0.5s;
+}
+
+.content:hover{
+	background-color: rgba(235, 255, 255, 0.01);
+}
+
+
+/*+-------------------------------------------------------------------------+*/
+/*|																			|*/
+/*|								Tableau Admin								|*/
 /*|																			|*/
 /*+-------------------------------------------------------------------------+*/
 
