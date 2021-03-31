@@ -238,6 +238,7 @@ table a:hover{
 
 .content:hover{
 	background-color: rgba(235, 255, 255, 0.01);
+	transition-duration: 0.1s;
 }
 
 

@@ -31,7 +31,10 @@
 				  		<td><c:out value="${ Comment.value.message }"></c:out></td>
 				  		<td><c:out value="${ Comment.value.email }"></c:out></td>
 				  		<td><c:out value="11/12/2036"></c:out></td>
-				  		<td><a class="delete" href="#"></a></td>
+				  		<td><a class="delete" href="
+          							<c:url value="/adminDeletComm">
+          							<c:param name="ID" value="${Comment.value.ID}"/>
+		            				</c:url>"></a></td>
 				  	</tr>
 				</c:forEach>
 			</table>

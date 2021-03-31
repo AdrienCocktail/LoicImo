@@ -14,6 +14,7 @@ public class CommAccueilDaoImpl implements CommAccueilDao{
 	private DAOFactory          daoFactory;
 	
 	private static final String SQL_SELECT_ALL = "SELECT * FROM commaccueil";
+	private static final String SQL_DELET_ID = "DELETE FROM commaccueil WHERE ID = ?";
 
 	CommAccueilDaoImpl( DAOFactory daoFactory ) {
         this.daoFactory = daoFactory;
@@ -41,6 +42,25 @@ public class CommAccueilDaoImpl implements CommAccueilDao{
 	    }
 
 	    return commAccueil;
+	}
+	
+	public void delet(String ID) throws DAOException{
+		
+		Connection connexion = null;
+	    PreparedStatement preparedStatement = null;
+	    ResultSet resultSet = null;
+
+	    try {
+	        /* Récupération d'une connexion depuis la Factory */
+	        connexion = daoFactory.getConnection();
+	        preparedStatement = initialisationRequetePreparee( connexion, SQL_DELET_ID, true, ID );
+	        preparedStatement.executeUpdate();
+	        
+	    } catch ( SQLException e ) {
+	        throw new DAOException( e );
+	    } finally {
+	        fermeturesSilencieuses( resultSet, preparedStatement, connexion );
+	    }
 	}
 	
 	private static CommAccueil map( ResultSet resultSet ) throws SQLException {
