@@ -127,6 +127,67 @@ a:hover::before{
 
 /*+-------------------------------------------------------------------------+*/
 /*|																			|*/
+/*|									TRIO									|*/
+/*|																			|*/
+/*+-------------------------------------------------------------------------+*/
+
+.trio {
+	display: flex;
+	padding: 180px 20px 180px 20px;
+	--imgSize: 80px;
+}
+
+.trio h1, p{
+	text-align: center;
+}
+
+.trio p{
+	font-size: 15px;
+}
+
+.trio div{
+	margin-left: auto;
+    margin-right: auto;
+    padding: 0px 40px 0px 40px;
+}
+
+.imgBoussole {
+	width: var(--imgSize);
+	height: var(--imgSize);
+	background: url(img/Boussole.png) center center / contain no-repeat;
+}
+
+.Negocier {
+	width: var(--imgSize);
+	height: var(--imgSize);
+	background: url(img/Negocier.png) center center / contain no-repeat;
+}
+
+.Methodologie {
+	width: var(--imgSize);
+	height: var(--imgSize);
+	background: url(img/Methodologie.png) center center / contain no-repeat;
+}
+
+
+/*+-------------------------------------------------------------------------+*/
+/*|																			|*/
+/*|									TRIO									|*/
+/*|																			|*/
+/*+-------------------------------------------------------------------------+*/
+
+.img{
+  	background-size: cover;
+    position: relative;
+  	width: 3000px;
+  	height: 300px;
+	background: url(img/lyonOK.jpg) center center / contain no-repeat;
+	background-attachment:fixed;
+	box-shadow: inset 0px 0px 20px rgb(0 0 0 / 30%);
+}
+
+/*+-------------------------------------------------------------------------+*/
+/*|																			|*/
 /*|								ESPACE COMMENTAIRE							|*/
 /*|																			|*/
 /*+-------------------------------------------------------------------------+*/
