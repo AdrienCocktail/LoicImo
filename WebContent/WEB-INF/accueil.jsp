@@ -40,6 +40,10 @@
 		<div class="img">
 		</div>
 		
+		<div class="bandeau">
+			<h1>Formation pour devenir propriétaire</h1>
+		</div>
+		
 		<div class="spaceComm">
 			<c:forEach items="${ Comment }" var="Comment" varStatus="boucle">
 				<div class="card">
