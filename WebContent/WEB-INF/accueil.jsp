@@ -40,6 +40,24 @@
 		<div class="img">
 		</div>
 		
+		<div class="About">
+			<div class="Text">
+				<h1>ABOUT</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sapien eros, 
+				elementum nec enim nec, laoreet pharetra elit. Integer et dignissim neque. 
+				Curabitur neque elit, elementum quis purus vitae, tempor mattis nisi.<br><br>
+				Nunc ultricies leo at rutrum ultrices. Integer aliquet lorem eget ante efficitur 
+				egestas. Etiam in dolor massa. Phasellus vitae scelerisque tortor. Nam quam orci, 
+				finibus vitae nibh vitae, tincidunt tincidunt massa. Nunc pretium aliquet congue.<br><br>
+				Nam quam orci, finibus vitae nibh vitae, tincidunt tincidunt massa. Nunc pretium aliquet congue.</p>
+			</div>
+			<div class="Img">
+			</div>
+		</div>
+		
+		<div class="img2">
+		</div>
+		
 		<div class="content">
 			<div class="bandeau">
 				<h1>Formation pour devenir propriétaire</h1>
