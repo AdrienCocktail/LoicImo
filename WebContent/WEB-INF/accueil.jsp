@@ -40,8 +40,11 @@
 		<div class="img">
 		</div>
 		
-		<div class="bandeau">
-			<h1>Formation pour devenir propriétaire</h1>
+		<div class="content">
+			<div class="bandeau">
+				<h1>Formation pour devenir propriétaire</h1>
+				<p><a href="#">Débuter facilement</a></p>
+			</div>
 		</div>
 		
 		<div class="spaceComm">
