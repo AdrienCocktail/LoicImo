@@ -19,6 +19,11 @@
 		<servlet-name>AdminDeletComm</servlet-name>
 		<servlet-class>com.loicimo.servlets.AdminDeletComm</servlet-class>
 	</servlet>
+	
+	<servlet>
+		<servlet-name>ConnectAdm</servlet-name>
+		<servlet-class>com.loicimo.servlets.ConnectAdm</servlet-class>
+	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>Accueil</servlet-name>
@@ -33,6 +38,11 @@
 	<servlet-mapping>
 		<servlet-name>AdminDeletComm</servlet-name>
 		<url-pattern>/adminDeletComm</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>ConnectAdm</servlet-name>
+		<url-pattern>/connectAdm</url-pattern>
 	</servlet-mapping>
   
 </web-app>
