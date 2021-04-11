@@ -24,12 +24,13 @@ public class ConnectAdm extends HttpServlet{
     public static final String ATT_ADMIN_FORM    = "adminForm";
     public static final String ATT_SESSION_ADMIN = "sessionAdmin";
 
-	public static final String VUE = "/WEB-INF/connectAdm.jsp";
+	public static final String VUE_ADMIN = "/admin";
+	public static final String VUE_CONNECT_ADMIN = "/WEB-INF/connectAdm.jsp";
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) 
 	throws ServletException, IOException{
 		
-		this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
+		this.getServletContext().getRequestDispatcher( VUE_CONNECT_ADMIN ).forward( request, response );
 	}
 	
 	public void doPost( HttpServletRequest request, HttpServletResponse response ) 
@@ -42,6 +43,10 @@ public class ConnectAdm extends HttpServlet{
 
         /* Récupération de la session depuis la requête */
         HttpSession session = request.getSession();
+        
+        /* Stockage du formulaire et du bean dans l'objet request */
+        request.setAttribute( ATT_ADMIN_FORM, adminForm );
+        request.setAttribute( ATT_ADMIN, admin );
 
         /**
          * Si aucune erreur de validation n'a eu lieu, alors ajout du bean
@@ -49,14 +54,11 @@ public class ConnectAdm extends HttpServlet{
          */
         if ( adminForm.getErreurs().isEmpty() ) {
             session.setAttribute( ATT_SESSION_ADMIN, admin );
+            response.sendRedirect( request.getContextPath() + VUE_ADMIN );
+            
         } else {
             session.setAttribute( ATT_SESSION_ADMIN, null );
+            this.getServletContext().getRequestDispatcher( VUE_CONNECT_ADMIN ).forward( request, response );
         }
-
-        /* Stockage du formulaire et du bean dans l'objet request */
-        request.setAttribute( ATT_ADMIN_FORM, adminForm );
-        request.setAttribute( ATT_ADMIN, admin );
-
-        this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
     }
 }

@@ -17,7 +17,7 @@ import com.loicimo.dao.DAOFactory;
 public class Admin extends HttpServlet {
 
     public static final String ATT_COMMENT = "Comment";
-	public static final String VUE = "/WEB-INF/admin.jsp";
+	public static final String VUE = "/META-INF/restreint/admin.jsp";
     public static final String CONF_DAO_FACTORY = "daofactory";
 	
 	private CommAccueilDao     commAccueilDao;
