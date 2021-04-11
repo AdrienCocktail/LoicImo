@@ -8,12 +8,16 @@ import javax.servlet.FilterConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
+@WebFilter( urlPatterns="/admin") 
 public class FilterAdm implements Filter {
 	
-	public static final String ACCES_CONNECT_ADM = "path";
+	public static final String ACCES_CONNECT_ADM = "/connectAdm";
+    public static final String ATT_SESSION_ADMIN = "sessionAdmin";
 	
     public void init( FilterConfig config ) throws ServletException {
     }
@@ -24,7 +28,10 @@ public class FilterAdm implements Filter {
 		HttpServletRequest request = (HttpServletRequest) req;
 		HttpServletResponse response = (HttpServletResponse) res;
 		
-		if (true) {
+		/* Récupération de la session depuis la requête */
+        HttpSession session = request.getSession();
+		
+		if (session.getAttribute( ATT_SESSION_ADMIN ) == null) {
 		    /* Redirection vers la page publique */
 		    response.sendRedirect( request.getContextPath() + ACCES_CONNECT_ADM );
 		} else {
