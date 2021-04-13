@@ -9,7 +9,15 @@
 		<link type="text/css" rel="stylesheet" href="<c:url value="/inc/Style.css"/>" />
 	</head>
 	<body>
-		<c:import url="/inc/menu.jsp" />
+		<nav class="menu">
+			<div>
+				<a class="logo" href="#"><img src="https://fontmeme.com/permalink/210318/3383eb2d1c2ef35ec9474a43fa397d97.png" 
+				alt="frances-ha-font" border="0" height="20px"></a>
+			</div>
+			<ul>
+				<li><a class="deconnexion" href="./deconnectAdm">Déconnexion</a></li>
+			</ul>
+		</nav>
 		p
 		<div class="tableau">
 			<table>
