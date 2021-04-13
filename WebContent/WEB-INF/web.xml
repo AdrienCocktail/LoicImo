@@ -35,6 +35,12 @@
 		<servlet-name>ConnectAdm</servlet-name>
 		<servlet-class>com.loicimo.servlets.ConnectAdm</servlet-class>
 	</servlet>
+	
+	<servlet>
+		<servlet-name>DeconnectAdm</servlet-name>
+		<servlet-class>com.loicimo.servlets.DeconnectAdm</servlet-class>
+	</servlet>
+
 
 	<servlet-mapping>
 		<servlet-name>Accueil</servlet-name>
@@ -54,6 +60,11 @@
 	<servlet-mapping>
 		<servlet-name>ConnectAdm</servlet-name>
 		<url-pattern>/connectAdm</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>DeconnectAdm</servlet-name>
+		<url-pattern>/deconnectAdm</url-pattern>
 	</servlet-mapping>
   
 </web-app>

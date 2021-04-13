@@ -57,6 +57,11 @@ body, p, legend, label, input {
 	transition-duration: 0.2s;
 }
 
+.menu ul li .deconnexion:hover{
+	background-color: #A60000;
+	transition-duration: 0.2s;
+}
+
 .logo img{
 	transform: translateY(4px);
 }
@@ -72,6 +77,7 @@ body, p, legend, label, input {
 	background: url(img/Accueil.png) center center / contain no-repeat;
 	margin-right: 3px;
 	transform: translateY(-1px);
+	transition-duration: 0.5s;
 }
 
 .a_propos::before {
@@ -81,6 +87,7 @@ body, p, legend, label, input {
 	background: url(img/A_propos.png) center center / contain no-repeat;
 	margin-right: 3px;
 	transform: translateY(-1px);
+	transition-duration: 0.5s;
 }
 
 .temoignages::before {
@@ -90,6 +97,7 @@ body, p, legend, label, input {
 	background: url(img/Temoignages.png) center center / contain no-repeat;
 	margin-right: 3px;
 	transform: translateY(-1px);
+	transition-duration: 0.5s;
 }
 
 .formation::before {
@@ -99,6 +107,7 @@ body, p, legend, label, input {
 	background: url(img/Formation.png) center center / contain no-repeat;
 	margin-right: 3px;
 	transform: translateY(-1px);
+	transition-duration: 0.5s;
 }
 
 .contact::before {
@@ -108,6 +117,17 @@ body, p, legend, label, input {
 	background: url(img/Contact.png) center center / contain no-repeat;
 	margin-right: 3px;
 	transform: translateY(-1px);
+	transition-duration: 0.5s;
+}
+
+.deconnexion::before {
+	content: '';
+	width: 20px;
+	height: 20px;
+	background: url(img/Deconnexion.png) center center / contain no-repeat;
+	margin-right: 3px;
+	transform: translateY(-1px);
+	transition-duration: 0.5s;
 }
 
 a:hover::before{
@@ -226,7 +246,6 @@ a:hover::before{
 }
 
 .About .Text h1{
-	
 	display: flex;
 	justify-content: center;
 	font-size: 52px;
@@ -441,6 +460,73 @@ table a:hover{
 /*+-------------------------------------------------------------------------+*/
 /*|																			|*/
 /*|								Tableau Admin								|*/
+/*|																			|*/
+/*+-------------------------------------------------------------------------+*/
+
+/*+-------------------------------------------------------------------------+*/
+/*|																			|*/
+/*|							Connection Admin								|*/
+/*|																			|*/
+/*+-------------------------------------------------------------------------+*/
+
+.connection{
+	display: flex;
+	background: no-repeat 70% 55%/100% url(img/connexion4.jpg);
+	justify-content: center;
+}
+
+.connectForm {
+	padding: 80px 0px 0px 0px;
+	margin: 0px;
+}
+
+.fieldset {
+	border: none;
+	width: 200px;
+	height: 300px;
+	background-color: rgba(255, 255, 255, 0.4);
+	padding: 60px 40px 40px 40px;
+	border-radius: 3px;
+	flex-direction: column;
+}
+
+.connectForm h1 {
+	margin: 0px 0px 60px 0px;
+	display: flex;
+	justify-content: center;
+	font-size: 26px;
+	font-family: raleway,sans-serif;
+	color: #475972;
+}
+
+.connectForm .erreur {
+	color: red;
+}
+
+.connection input {
+	height: 35px;
+	width: 95%;
+	border: none;
+	border-radius: 3px;
+	background-color: #EFEFEF;
+	padding: 0px 0px 0px 10px;
+	margin: 5px 0px 5px 0px;
+}
+
+.connection .btn {
+	width: 100%;
+	margin: 40px 0px 5px 0px;
+	background-color: #35B9D2;
+	color: #FFFFFF;
+}
+
+.connection .btn::hover {
+	background-color: #475972;
+}
+
+/*+-------------------------------------------------------------------------+*/
+/*|																			|*/
+/*|							Connection Admin								|*/
 /*|																			|*/
 /*+-------------------------------------------------------------------------+*/
 

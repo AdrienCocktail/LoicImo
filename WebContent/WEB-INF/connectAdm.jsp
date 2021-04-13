@@ -7,23 +7,24 @@
         <title>Connexion</title>
 		<link type="text/css" rel="stylesheet" href="<c:url value="/inc/Style.css"/>" />
     </head>
-    <body>
-        <form method="post" action="connectAdm">
-            <fieldset>
-                <legend>Connexion</legend>
+    <body class="connection">
+        <form class="connectForm" method="post" action="connectAdm">
+            <fieldset class="fieldset">
+            
+            	<h1>ESPACE ADMIN</h1>
 
-                <label for="text">Pseudo <span class="requis">*</span></label>
-                <input type="text" id="pseudo" name="pseudo" size="20" maxlength="60" />
+                <input type="text" id="pseudo" name="pseudo" placeholder="Pseudo" size="40" maxlength="10" />
                 <span class="erreur">${adminForm.erreurs['pseudo']}</span>
                 <br />
 
-                <label for="password">Mot de passe <span class="requis">*</span></label>
-                <input type="password" id="password" name="password" value="" size="20" maxlength="20" />
+                <input type="password" id="password" name="password" placeholder="Password" size="20" maxlength="20" />
                 <span class="erreur">${adminForm.erreurs['password']}</span>
                 <br />
 
-                <input type="submit" value="Connexion" class="sansLabel" />
+                <input class="btn" type="submit" value="Connexion" class="sansLabel" />
                 <br />
+                
+                <p class="erreur">${adminForm.resultat}</p>
             </fieldset>
         </form>
     </body>
