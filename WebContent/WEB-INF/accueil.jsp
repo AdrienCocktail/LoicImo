@@ -74,5 +74,17 @@
 			</c:forEach>
 		</div>
 		
+		<form class="commentForm" method="post" action="accueil">
+			<input type="text" id="prenom" name=prenom placeholder="Prénom" size="40" maxlength="10" />
+			<input type="text" id="nom" name=nom placeholder="Nom" size="40" maxlength="10" />
+			<textarea id="commentaire" name=commentaire placeholder="commentaire" rows="5" cols="33"></textarea>
+			<input type="text" id="email" name=email placeholder="email" size="40" maxlength="40" />
+			
+			<input class="btn" type="submit" value="Envoyer" class="sansLabel" />
+			
+		</form>
+		
 	</body>
+	<footer>
+	</footer>
 </html>

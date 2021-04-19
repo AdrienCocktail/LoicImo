@@ -41,4 +41,23 @@ public class Accueil extends HttpServlet{
 		
 		this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
 	}
+	
+	public void doPost(HttpServletRequest request, HttpServletResponse response) 
+		throws ServletException, IOException{
+			
+			List<CommAccueil> listcommAccueil = commAccueilDao.read();
+			Map<Long,CommAccueil> mapCommAccueil = new HashMap<Long, CommAccueil>();
+			for (CommAccueil commAccueil : listcommAccueil) {
+				mapCommAccueil.put( commAccueil.getID(), commAccueil);
+			}
+			
+	        request.setAttribute( ATT_COMMENT, mapCommAccueil );
+	        
+	        commAccueilDao.update(request.getParameter("prenom"),
+	        					request.getParameter("nom"),
+	        					request.getParameter("commentaire"),
+	        					request.getParameter("email"));
+			
+			this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
+		}	
 }

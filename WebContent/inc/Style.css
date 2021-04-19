@@ -5,6 +5,10 @@ body, p, legend, label, input {
     margin: 0px;
 }
 
+p, h1 {
+	color: #2D2C2C;
+}
+
 /*+-------------------------------------------------------------------------+*/
 /*|																			|*/
 /*|									MENU									|*/
@@ -347,7 +351,7 @@ a:hover::before{
 /*+-------------------------------------------------------------------------+*/
 
 .spaceComm{
-	padding: 100px 80px 10px 80px;
+	padding: 100px 80px 300px 80px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
@@ -355,7 +359,7 @@ a:hover::before{
 }
 
 .card{
-	background-color: #FAF9F9;
+	background-color: #FFFFFF;
 	margin: 50px 5px 0px 5px;
 	padding: 0px 20px 20px 20px;
 	width: 400px;
@@ -529,4 +533,15 @@ table a:hover{
 /*|							Connection Admin								|*/
 /*|																			|*/
 /*+-------------------------------------------------------------------------+*/
+
+footer {
+	background-size: cover;
+  	height: 200px;
+	background-color: #2c2c2d;
+	background-attachment: fixed;
+}
+
+footer p {
+	color: #FFFFFF;
+}
 
