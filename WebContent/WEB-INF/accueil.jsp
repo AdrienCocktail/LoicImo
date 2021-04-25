@@ -10,6 +10,22 @@
 	</head>
 	<body>
 		<c:import url="/inc/menu.jsp" />
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		
+		<div class="succes">
+			<c:if test="${!empty sessionScope.succes}">
+	    		Votre message a bien été envoyé.
+	    		
+				<c:remove var="succes" scope="session" />
+			</c:if>
+		</div>
 		
 		<div class="trio">
 			<div class="trio_1">
@@ -81,7 +97,10 @@
 			<input type="text" id="email" name=email placeholder="email" size="40" maxlength="40" />
 			
 			<input class="btn" type="submit" value="Envoyer" class="sansLabel" />
-			
+			<span class="erreur">${commAccueilForm.erreurs['prenom']}
+								${commAccueilForm.erreurs['nom']}
+								${commAccueilForm.erreurs['commentaire']}
+								${commAccueilForm.erreurs['email']}</span>
 		</form>
 		
 	</body>
