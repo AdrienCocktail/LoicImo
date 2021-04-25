@@ -112,8 +112,8 @@ public class CommAccueilForm {
 		if (email == null) {
 			email = "0";
 		}
-		if ( email.length() < 3 || email.length() > 15 ) {
-            throw new Exception( "<br>L'email doit comporter au minimum 3 caractéres et au maximum 15 caractéres" );
+		if ( email.length() < 3 || email.length() > 45 ) {
+            throw new Exception( "<br>L'email doit comporter au minimum 3 caractéres et au maximum 45 caractéres" );
         }
 	}
 	

@@ -18,7 +18,15 @@
 		<br>
 		<br>
 		<br>
-		<span class="succes">${commAccueilForm.resultat}</span>
+		
+		<div class="succes">
+			<c:if test="${!empty sessionScope.succes}">
+	    		Votre message a bien été envoyé.
+	    		
+				<c:remove var="succes" scope="session" />
+			</c:if>
+		</div>
+		
 		<div class="trio">
 			<div class="trio_1">
 				<div class="imgBoussole">

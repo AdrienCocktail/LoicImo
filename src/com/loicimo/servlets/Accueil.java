@@ -10,6 +10,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.loicimo.beans.CommAccueil;
 import com.loicimo.dao.CommAccueilDao;
@@ -20,6 +21,7 @@ public class Accueil extends HttpServlet{
 
     public static final String ATT_COMMENT 			= "Comment";
 	public static final String VUE 					= "/WEB-INF/accueil.jsp";
+	public static final String VUE_REDIRECT 		= "/accueil";
     public static final String CONF_DAO_FACTORY 	= "daofactory";
     
     public static final String ATT_COMMACCUEIL_FORM = "commAccueilForm";
@@ -29,6 +31,8 @@ public class Accueil extends HttpServlet{
     public static final String PARAM_NOM			="nom";
     public static final String PARAM_COMMENTAIRE 	="commentaire";
     public static final String PRARAM_EMAIL			="email";
+    
+    public static final String ATT_SESSION_SUCCES	="succes";
     
     private CommAccueilDao     commAccueilDao;
 
@@ -73,9 +77,14 @@ public class Accueil extends HttpServlet{
     					request.getParameter(PARAM_NOM),
     					request.getParameter(PARAM_COMMENTAIRE),
     					request.getParameter(PRARAM_EMAIL));
-		        response.reset();
+		        
+		        		HttpSession session = request.getSession(false);
+		        		session.setAttribute(ATT_SESSION_SUCCES,ATT_SESSION_SUCCES);
+		        	
+		        		response.sendRedirect( request.getContextPath() + VUE_REDIRECT );
 	        }
-			
-			this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
+	        else {
+	        	this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
+	        }
 		}	
 }
