@@ -14,12 +14,21 @@ import javax.servlet.http.HttpServletResponse;
 import com.loicimo.beans.CommAccueil;
 import com.loicimo.dao.CommAccueilDao;
 import com.loicimo.dao.DAOFactory;
+import com.loicimo.forms.CommAccueilForm;
 
 public class Accueil extends HttpServlet{
 
-    public static final String ATT_COMMENT = "Comment";
-	public static final String VUE = "/WEB-INF/accueil.jsp";
-    public static final String CONF_DAO_FACTORY = "daofactory";
+    public static final String ATT_COMMENT 			= "Comment";
+	public static final String VUE 					= "/WEB-INF/accueil.jsp";
+    public static final String CONF_DAO_FACTORY 	= "daofactory";
+    
+    public static final String ATT_COMMACCUEIL_FORM = "commAccueilForm";
+    public static final String ATT_COMMACCUEIL 		= "commAccueil";
+    
+    public static final String PARAM_PRENOM 		="prenom";
+    public static final String PARAM_NOM			="nom";
+    public static final String PARAM_COMMENTAIRE 	="commentaire";
+    public static final String PRARAM_EMAIL			="email";
     
     private CommAccueilDao     commAccueilDao;
 
@@ -53,10 +62,19 @@ public class Accueil extends HttpServlet{
 			
 	        request.setAttribute( ATT_COMMENT, mapCommAccueil );
 	        
-	        commAccueilDao.update(request.getParameter("prenom"),
-	        					request.getParameter("nom"),
-	        					request.getParameter("commentaire"),
-	        					request.getParameter("email"));
+	        CommAccueilForm commAccueilForm = new CommAccueilForm();
+	        CommAccueil commAccueil = commAccueilForm.CommAccueilVal(request);
+	        
+	        request.setAttribute( ATT_COMMACCUEIL_FORM, commAccueilForm );
+	        request.setAttribute( ATT_COMMACCUEIL, commAccueil );
+	        
+	        if(commAccueilForm.getErreurs().isEmpty()) {
+		        commAccueilDao.update(request.getParameter(PARAM_PRENOM),
+    					request.getParameter(PARAM_NOM),
+    					request.getParameter(PARAM_COMMENTAIRE),
+    					request.getParameter(PRARAM_EMAIL));
+		        response.reset();
+	        }
 			
 			this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
 		}	

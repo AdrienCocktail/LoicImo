@@ -10,7 +10,15 @@
 	</head>
 	<body>
 		<c:import url="/inc/menu.jsp" />
-		
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<span class="succes">${commAccueilForm.resultat}</span>
 		<div class="trio">
 			<div class="trio_1">
 				<div class="imgBoussole">
@@ -81,7 +89,10 @@
 			<input type="text" id="email" name=email placeholder="email" size="40" maxlength="40" />
 			
 			<input class="btn" type="submit" value="Envoyer" class="sansLabel" />
-			
+			<span class="erreur">${commAccueilForm.erreurs['prenom']}
+								${commAccueilForm.erreurs['nom']}
+								${commAccueilForm.erreurs['commentaire']}
+								${commAccueilForm.erreurs['email']}</span>
 		</form>
 		
 	</body>
