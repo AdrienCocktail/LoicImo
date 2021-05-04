@@ -86,7 +86,7 @@ public class CommAccueilForm {
 			prenom = "0";
 		}
 		if ( prenom.length() < 3 || prenom.length() > 10) {
-            throw new Exception( "<br>Le prénom doit comporter au minimum 3 caractéres et au maximum 10 caractéres" );
+            throw new Exception( "<br>- Le prénom doit comporter au minimum 3 caractéres et au maximum 10 caractéres" );
         }
 	}
 	
@@ -95,7 +95,7 @@ public class CommAccueilForm {
 			nom = "0";
 		}
 		if ( nom.length() < 3 || nom.length() > 10) {
-            throw new Exception( "<br>Le nom doit comporter au minimum 3 caractéres et au maximum 10 caractéres" );
+            throw new Exception( "<br>- Le nom doit comporter au minimum 3 caractéres et au maximum 10 caractéres" );
         }
 	}
 	
@@ -104,7 +104,7 @@ public class CommAccueilForm {
 			commentaire = "0";
 		}
 		if ( commentaire.length() < 3 || commentaire.length() > 250 ) {
-            throw new Exception( "<br>Le commentaire doit comporter au minimum 3 caractéres et au maximum 250 caractéres" );
+            throw new Exception( "<br>- Le commentaire doit comporter au minimum 3 caractéres et au maximum 250 caractéres" );
         }
 	}
 	
@@ -113,7 +113,7 @@ public class CommAccueilForm {
 			email = "0";
 		}
 		if ( email.length() < 3 || email.length() > 45 ) {
-            throw new Exception( "<br>L'email doit comporter au minimum 3 caractéres et au maximum 45 caractéres" );
+            throw new Exception( "<br>- L'email doit comporter au minimum 3 caractéres et au maximum 45 caractéres" );
         }
 	}
 	

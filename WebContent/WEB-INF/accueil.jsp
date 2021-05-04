@@ -10,23 +10,35 @@
 	</head>
 	<body>
 		<c:import url="/inc/menu.jsp" />
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		
-		<div class="succes">
+		p
+		<div class="containerSEI">
 			<c:if test="${!empty sessionScope.succes}">
-	    		Votre message a bien été envoyé.
-	    		
-				<c:remove var="succes" scope="session" />
+				<div class="succes">
+		    		Votre message a bien été envoyé.
+					<c:remove var="succes" scope="session" />
+					<div class="deleteSucc">
+						<a href="http://localhost:8080/LoicImo/accueil"></a>
+					</div>
+				</div>
 			</c:if>
-		</div>
-		
+			
+			<c:if test="${!empty commAccueilForm.erreurs}">
+				<div class="erreur">
+					<span>	
+						${commAccueilForm.erreurs['prenom']}
+						${commAccueilForm.erreurs['nom']}
+						${commAccueilForm.erreurs['commentaire']}
+						${commAccueilForm.erreurs['email']}
+						<br>
+						<div class="backForm"><a href="#form">Revenir au formulaire</a></div>
+					</span>
+					<div class="deleteErr">
+						<a href="http://localhost:8080/LoicImo/accueil"></a>
+					</div>
+				</div>
+			</c:if>
+		</div>	
+	
 		<div class="trio">
 			<div class="trio_1">
 				<div class="imgBoussole">
@@ -90,18 +102,27 @@
 			</c:forEach>
 		</div>
 		
-		<form class="commentForm" method="post" action="accueil">
-			<input type="text" id="prenom" name=prenom placeholder="Prénom" size="40" maxlength="10" />
-			<input type="text" id="nom" name=nom placeholder="Nom" size="40" maxlength="10" />
-			<textarea id="commentaire" name=commentaire placeholder="commentaire" rows="5" cols="33"></textarea>
-			<input type="text" id="email" name=email placeholder="email" size="40" maxlength="40" />
-			
-			<input class="btn" type="submit" value="Envoyer" class="sansLabel" />
-			<span class="erreur">${commAccueilForm.erreurs['prenom']}
-								${commAccueilForm.erreurs['nom']}
-								${commAccueilForm.erreurs['commentaire']}
-								${commAccueilForm.erreurs['email']}</span>
-		</form>
+		<div class="containerCommentForm" id="form">
+			<form class="commentForm" method="post" action="accueil">
+				<div class="row1">
+					<input class="${!empty commAccueilForm.erreurs['prenom'] ? 'erreurs' : 'neutre' }" type="text" id="prenom" 
+						name=prenom value="${commAccueil.firstName}" placeholder="Prénom" size="40" maxlength="10" required/>
+					<input class="${!empty commAccueilForm.erreurs['nom'] ? 'erreurs' : 'neutre' }" type="text" id="nom" 
+						name=nom value="${commAccueil.lastName}" placeholder="Nom" size="40" maxlength="10" required/>
+				</div>
+				<div class="row2">
+					<input class="${!empty commAccueilForm.erreurs['email'] ? 'erreurs' : 'neutre' }" type="text" id="email" 
+						name=email value="${commAccueil.email}" placeholder="Email" size="40" maxlength="40" required/>
+				</div>
+				<div class="row3">
+					<textarea class="${!empty commAccueilForm.erreurs['commentaire'] ? 'erreurs' : 'neutre' }" id="commentaire" 
+						name=commentaire placeholder="Commentaire" rows="5" cols="33" required>${commAccueil.message}</textarea>
+				</div>
+				<div class="row4">
+					<input class="btn" type="submit" value="Envoyer" class="sansLabel" />
+				</div>
+			</form>
+		</div>
 		
 	</body>
 	<footer>
