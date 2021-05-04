@@ -14,17 +14,17 @@
             	<h1>ESPACE ADMIN</h1>
 
                 <input type="text" id="pseudo" name="pseudo" placeholder="Pseudo" size="40" maxlength="10" />
-                <span class="erreur">${adminForm.erreurs['pseudo']}</span>
+                <span class="erreurAdm">${adminForm.erreurs['pseudo']}</span>
                 <br />
 
                 <input type="password" id="password" name="password" placeholder="Password" size="20" maxlength="20" />
-                <span class="erreur">${adminForm.erreurs['password']}</span>
+                <span class="erreurAdm">${adminForm.erreurs['password']}</span>
                 <br />
 
                 <input class="btn" type="submit" value="Connexion" class="sansLabel" />
                 <br />
                 
-                <p class="erreur">${adminForm.resultat}</p>
+                <p class="erreurAdm">${adminForm.resultat}</p>
             </fieldset>
         </form>
     </body>
